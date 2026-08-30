@@ -1,0 +1,143 @@
+/* sécurité */
+#qeel-source-wrapper.qeel-attente{ visibility:hidden; }
+#qeel-source-wrapper.qeel-pret{ visibility:visible; }
+#qeel-recepteur{ margin-top:24px; }
+
+/* ============================================================
+   QEEL
+   ============================================================ */
+.qeel{
+  background:var(--neutral);
+  border:var(--border);
+  border-radius:10px;
+  padding:18px 20px;
+  margin:0 0 20px;
+  color:var(--textColor);
+}
+
+/* --- stats --- */
+.qeel-haut{
+  display:flex;flex-wrap:wrap;align-items:stretch;gap:18px;
+  padding-bottom:16px;margin-bottom:16px;
+  border-bottom:var(--border);
+}
+.qeel-bloc{display:flex;align-items:center;gap:12px;flex:1 1 auto;min-width:170px;}
+.qeel-bloc > div{flex:1 1 auto;min-width:0;}
+.qeel-bloc-groupes{flex:0 1 auto;}   /* le bloc epouse la largeur des cartes */
+.qeel-bloc + .qeel-bloc{border-left:var(--border);padding-left:18px;}
+.qeel-titre{
+  font-size:var(--little-size);font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--accentClr);margin-bottom:6px;
+}
+.qeel-stats{display:flex;gap:20px;flex-wrap:wrap;}
+.qeel-stat b{display:block;font-size:var(--large-size);line-height:1.1;color:var(--contrast);}
+.qeel-stat span{font-size:11px;opacity:.75;}
+/* --- groupes --- */
+.qeel-groupes-liste{
+  display:flex;gap:10px;flex-wrap:nowrap;
+  width:100%;justify-content:space-between;
+}
+.qeel-groupe{
+  position:relative;display:block;flex:0 0 auto;
+  text-decoration:none;
+}
+.qeel-carte{
+  width:48px;height:62px;   /* taille des cartes */
+  margin:0 auto;display:block;
+  background-color:currentColor;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+  -webkit-mask-size:contain;mask-size:contain;
+  transition:transform 140ms ease;
+}
+.qeel-groupe:hover .qeel-carte{transform:translateY(-3px);}
+
+.qeel-bulle{
+  position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);
+  z-index:20;white-space:nowrap;pointer-events:none;
+  opacity:0;visibility:hidden;transition:opacity 120ms ease;
+  background:var(--neutralDark);color:var(--textColor);
+  border:var(--border);border-radius:6px;
+  padding:5px 9px;font-size:11px;line-height:1.3;
+  box-shadow:0 4px 14px rgba(0,0,0,.18);
+}
+.qeel-groupe:hover .qeel-bulle,
+.qeel-groupe:focus .qeel-bulle{opacity:1;visibility:visible;pointer-events:auto;}
+.qeel-bulle b{font-weight:600;color:currentColor;}
+.qeel-bulle .qeel-hex{
+  font-family:monospace;font-size:11px;letter-spacing:.02em;
+  cursor:pointer;border-bottom:1px dotted;
+}
+.qeel-bulle:after{
+  content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border:5px solid transparent;border-top-color:var(--neutralDark);
+}
+
+/* couleurs des groupes */
+.qeel-groupe.grp-1{color:#5b8dbe;}
+.qeel-groupe.grp-2{color:#d4a017;}
+.qeel-groupe.grp-3{color:#e07a2f;}
+.qeel-groupe.grp-4{color:#b5528a;}
+.qeel-groupe.grp-5{color:#9b6bc7;}
+.qeel-groupe.grp-6{color:#6f8f74;}
+
+/* cartes de tarots */
+.qeel-groupe.grp-1 .qeel-carte{-webkit-mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/lune.svg");mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/lune.svg");}
+.qeel-groupe.grp-2 .qeel-carte{-webkit-mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/etoile.svg");mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/etoile.svg");}
+.qeel-groupe.grp-3 .qeel-carte{-webkit-mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/soleil.svg");mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/soleil.svg");}
+.qeel-groupe.grp-4 .qeel-carte{-webkit-mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/amoureux.svg");mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/amoureux.svg");}
+.qeel-groupe.grp-5 .qeel-carte{-webkit-mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/roue.svg");mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/roue.svg");}
+.qeel-groupe.grp-6 .qeel-carte{-webkit-mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/mort.svg");mask-image:url("https://cdn.jsdelivr.net/gh/crashtest-debugland/el-bordel@main/cartes/mort.svg");}
+
+.qeel-citation{
+  flex:1 1 220px;display:flex;align-items:center;gap:12px;justify-content:flex-end;text-align:right;
+}
+.qeel-citation p{margin:0;font-style:italic;font-size:var(--little-size);line-height:1.5;max-width:230px;}
+.qeel-citation i{font-size:22px;color:var(--accentClr);opacity:.7;}
+
+/* --- listes membres --- */
+.qeel-bas{display:flex;gap:16px;align-items:stretch;flex-wrap:wrap;}
+.qeel-panneau{
+  flex:1 1 300px;min-width:260px;
+  background:var(--neutralDark);border:var(--border);border-radius:8px;
+  padding:12px 14px;display:flex;flex-direction:column;
+}
+.qeel-panneau-titre{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;
+  font-size:var(--little-size);font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--accentClr);
+}
+.qeel-compte{
+  background:var(--neutralDarker);color:var(--contrast);
+  border-radius:5px;padding:1px 8px;font-size:11px;letter-spacing:0;
+}
+.qeel-liste{
+  font-size:var(--little-size);line-height:1.9;
+  max-height:104px;overflow-y:auto;overscroll-behavior:contain;
+  scrollbar-width:thin;scrollbar-color:var(--neutralDarker) transparent;
+  padding-right:6px;
+}
+.qeel-liste::-webkit-scrollbar{width:6px;}
+.qeel-liste::-webkit-scrollbar-track{background:transparent;}
+.qeel-liste::-webkit-scrollbar-thumb{background:var(--neutralDarker);border-radius:3px;}
+.qeel-liste a{text-decoration:none;}
+
+.qeel-liste a span[style] strong{ font-weight:600; }
+.qeel-liste a:hover{ text-decoration:none; }
+.qeel-vide{opacity:.6;font-style:italic;}
+
+.qeel-inscrit{
+  flex:0 0 190px;background:var(--neutralDark);border:var(--border);border-radius:8px;
+  padding:12px 14px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+}
+.qeel-inscrit .pseudo{font-size:var(--medium-size);font-weight:700;}
+.qeel-inscrit .pseudo span[style] strong{font-weight:700;}
+.qeel-inscrit .bienvenue{font-size:11px;opacity:.75;}
+
+@media (max-width:900px){
+  .qeel-haut{flex-direction:column;align-items:stretch;}
+  .qeel-bloc + .qeel-bloc{border-left:none;border-top:var(--border);padding-left:0;padding-top:14px;}
+  .qeel-citation{justify-content:flex-start;text-align:left;}
+  .qeel-inscrit{flex:1 1 100%;}
+}

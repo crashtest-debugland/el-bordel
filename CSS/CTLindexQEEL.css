@@ -462,11 +462,15 @@
   line-height: 1;
   font-weight: 600;
   color: var(--contrast);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .ctl-prof-rang {
   display: block;
   margin-top: 5px;
+  overflow-wrap: break-word;
   font-size: 11px;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -495,15 +499,16 @@
 }
 
 .ctl-prof-liens {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 6px;
 }
 
 .ctl-prof-liens a {
   display: block;
   padding: 5px 11px;
+  text-align: center;
+  white-space: nowrap;
   border: var(--border);
   border-radius: 6px;
   background: var(--neutralDark);
@@ -522,8 +527,10 @@
 }
 
 .ctl-prof-compteurs {
-  display: flex;
-  gap: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
   text-align: center;
 }
 
@@ -751,8 +758,9 @@
     align-items: center;
   }
 
-  .ctl-prof-liens {
-    justify-content: center;
+  .ctl-prof-stats {
+    width: 100%;
+    max-width: 320px;
   }
 
   .profile_contact {
@@ -778,4 +786,3 @@
     padding-top: 12px;
   }
 }
-

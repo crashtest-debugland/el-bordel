@@ -708,6 +708,10 @@
   background: var(--neutralDarker);
 }
 
+.ctl-prof-bloc img{
+  width: 100%;
+}
+
 .ctl-prof-defile {
   max-height: var(--prof-colonne);
   overflow-y: auto;

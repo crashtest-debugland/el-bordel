@@ -787,6 +787,7 @@
   }
 }
 /* ------- SUJETS SURVEILLES ------- */
+
 #cp-main #memberlist {
   display: block;
   border-spacing: 0;
@@ -803,13 +804,14 @@
 }
 
 #cp-main #memberlist tr {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 8px 12px;
   margin-bottom: 10px;
-  padding: 10px;
-  background: var(--neutral);
+  padding: 10px 40px 10px 10px;
+  background: var(--neutralDark);
   border-radius: 5px;
 }
 
@@ -824,9 +826,10 @@
 #cp-main #memberlist td:nth-child(1) {
   flex: 0 0 auto;
   order: 1;
-  width: 50px;
-  height: 50px;
-  background: var(--neutralDark);
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background: var(--neutral);
 }
 
 #cp-main #memberlist td:nth-child(1) img {
@@ -837,7 +840,7 @@
 }
 
 #cp-main #memberlist td:nth-child(2) {
-  flex: 1 1 240px;
+  flex: 1 1 200px;
   order: 2;
   min-width: 0;
 }
@@ -873,14 +876,16 @@
 }
 
 #cp-main #memberlist td:nth-child(7) {
-  flex: 0 0 180px;
+  flex: 0 0 165px;
   order: 7;
   text-align: right;
 }
 
 #cp-main #memberlist td:nth-child(8) {
-  flex: 0 0 auto;
-  order: 8;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #cp-main #memberlist td:nth-child(3)::before {

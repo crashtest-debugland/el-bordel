@@ -917,3 +917,94 @@
     flex: 1 1 100%;
   }
 }
+
+/* ----- Sélecteur de balises dans l'éditeur ----- */
+.ctl-balises-bascule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin: 8px 0 0;
+  padding: 7px 12px;
+  border: var(--border);
+  border-radius: 6px;
+  background: var(--neutralDark);
+  color: var(--contrastLight);
+  font-family: var(--font);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.ctl-balises-bascule:hover {
+  color: var(--accentClr);
+  background: var(--neutralDarker);
+}
+
+.ctl-balises {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ctl-balises-famille {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ctl-balises-titre {
+  display: flex;
+  align-items: center;
+  gap: .8em;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--contrastLight);
+  opacity: .7;
+}
+
+.ctl-balises-titre::after {
+  content: "";
+  flex: 1 1 0;
+  height: 1px;
+  background: var(--neutralDarker);
+}
+
+.ctl-balises-jetons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.ctl-balises-jetons button {
+  padding: 4px 10px;
+  border: var(--border);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--textColor);
+  font-family: var(--font);
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.ctl-balises-jetons button:hover {
+  border-color: var(--accentClr);
+  background: var(--neutralDark);
+}
+
+.ctl-balises-jetons button * {
+  pointer-events: none;
+}
+
+.ctl-balises-jetons button:hover tw {
+  color: var(--textColor);
+  text-shadow: none;
+}

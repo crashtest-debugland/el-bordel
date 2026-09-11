@@ -311,7 +311,7 @@
 .ctl-sousforums a:hover{background:var(--accentClr);color:var(--neutral);}
 
 .ctl-dernier{
-  flex:0 0 var(--ctl-l-dernier);padding:9px 12px;
+  width: 140px;padding:9px 12px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   text-align:center;gap:2px;
 }

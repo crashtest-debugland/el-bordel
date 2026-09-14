@@ -215,6 +215,8 @@ body:has(#chatbox) * { box-sizing: border-box; }
 
 #chatbox_footer img:hover { opacity: 1; }
 
+#chatbox { outline: 4px solid red !important; }
+
 /* ----- tel ----- */
 
 @media (max-width: 620px) {

@@ -1266,11 +1266,11 @@ border-radius:5px;
 }
 
 .buttons {
-  background: var(--neutralDark);
-  padding: 1px 8px;
-  margin-right: 5px;
-  border-radius: 5px;
-  opacity: 1;
+    background: var(--neutral);
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    opacity: 1;
 }
 
 .buttons:hover {

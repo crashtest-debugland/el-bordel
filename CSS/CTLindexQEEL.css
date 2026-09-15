@@ -9,14 +9,17 @@
 #qeel-source-wrapper.qeel-pret{visibility:visible;}
 #qeel-recepteur{ margin-top:24px; clear:both; }
 
-.qeel{
-  --qeel-h:300px;
-  --qeel-l-tirage:145px;
-  --qeel-carte-l:78px;
-  --qeel-carte-h:126px;
-  background-color:var(--neutral);
-  border:var(--border);border-radius:10px;
-  padding:18px 20px;margin:0 0 20px;color:var(--textColor);
+.qeel {
+    --qeel-h: 300px;
+    --qeel-l-tirage: 155px; /* espace pour les cartes */
+    --qeel-carte-l: 78px;
+    --qeel-carte-h: 126px;
+    background-color: var(--neutral);
+    /* border: var(--border); */
+    border-radius: 10px;
+    /* padding: 18px 20px; */
+    margin: 0 0 20px;
+    color: var(--textColor);
 }
 
 .qeel-scene{display:flex;align-items:stretch;gap:0;}
@@ -45,7 +48,6 @@
   inset:0;
   border-radius:5px;
   background:var(--neutral);
-  box-shadow:0 3px 8px rgba(0,0,0,.30);
 }
 
 .qeel-carte{
@@ -92,15 +94,16 @@
 .qeel-groupe.grp-5 .qeel-carte{-webkit-mask-image:var(--qeel-carte-5);mask-image:var(--qeel-carte-5);}
 .qeel-groupe.grp-6 .qeel-carte{-webkit-mask-image:var(--qeel-carte-6);mask-image:var(--qeel-carte-6);}
 
-.qeel-blocs{
-  flex:1 1 auto;min-width:0;
-  height:var(--qeel-h);
-  display:grid;
- grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.62fr);
-  grid-template-rows:minmax(0, 1fr) auto;
-  gap:12px;
-  position:relative;
-  z-index:10;
+.qeel-blocs {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: var(--qeel-h);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .42fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 12px;
+    position: relative;
+    z-index: 10;
 }
 
 .qeel-panneau{

@@ -4,13 +4,14 @@
   overflow: hidden;
   border: 7px solid var(--neutralDark);
   border-radius: 14px;
-  background: var(--neutral);
+  background: var(--neutralDark);
   color: var(--textColor);
   font-size: 13px;
   text-align: left;
 }
 
 .dat > br,
+.dat-photo > br,
 .dat-corps > br,
 .dat-tags > br,
 .dat-nom > br,
@@ -24,7 +25,7 @@
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: var(--neutralDark);
+  background: var(--neutral);
   color: var(--contrast);
   font-size: 9px;
   font-weight: 700;
@@ -47,18 +48,29 @@
   opacity: .6;
 }
 
-.dat-photo { position: relative; }
+.dat-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--neutral);
+}
 
 .dat-photo img {
-  display: block;
-  width: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
   max-width: none !important;
-  aspect-ratio: 4 / 5;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
   object-fit: cover;
 }
 
 .dat-nom {
   position: absolute;
+  z-index: 1;
   right: 0;
   bottom: 0;
   left: 0;
@@ -121,7 +133,7 @@
   margin-bottom: 9px;
   padding: 11px 13px;
   border-radius: 10px;
-  background: var(--neutralDark);
+  background: var(--neutral);
 }
 
 .dat-bloc:last-child { margin-bottom: 0; }
@@ -201,7 +213,7 @@
 .dat-bulle {
   padding: 11px 14px;
   border-radius: 14px 14px 14px 4px;
-  background: var(--neutralDark);
+  background: var(--neutral);
   line-height: 1.55;
 }
 
@@ -238,7 +250,8 @@
   width: 66px !important;
   height: 66px !important;
   max-width: none !important;
-  border: 3px solid var(--neutral);
+  max-height: none !important;
+  border: 3px solid var(--neutralDark);
   border-radius: 50%;
   object-fit: cover;
 }

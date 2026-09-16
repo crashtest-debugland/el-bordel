@@ -464,14 +464,15 @@ img.pol-mini {
 }
 
 .pol-photos {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 3px;
 }
+.pol-photos:not(:has(img:nth-of-type(2))) { grid-template-columns: minmax(0, 1fr); }
+.pol-photos:has(img:nth-of-type(2)):not(:has(img:nth-of-type(3))) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .pol-photos img {
-  flex: 1 1 0;
   display: block;
-  min-width: 0;
   width: 100% !important;
   max-width: none !important;
   height: auto !important;
@@ -560,18 +561,6 @@ img.pol-vignette {
   object-fit: cover;
 }
 
-.pol-bouton {
-  flex: none;
-  padding: 6px 13px;
-  border-radius: 20px;
-  background: var(--accentClr);
-  color: var(--neutral);
-  font-size: 9.5px;
-  font-weight: 700;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-
 .pol-mot {
   margin: 0 13px 13px;
   padding: 10px 13px;
@@ -581,14 +570,14 @@ img.pol-vignette {
   line-height: 1.55;
 }
 
-.pol-fane { opacity: .62; }
+.pol-fane { opacity: .60; }
 
 .pol-fane .pol-bouton {
   border: var(--border);
   background: none;
   color: var(--contrastLight);
 }
-
+/* cacher des parties du message */
 div:has(> .ctl-msg-cote):has(.pol-notif) > .ctl-msg-cote { display: none; }
-
 div:has(> .ctl-msg-cote):has(.pol-notif) .signature_div { display: none; }
+div:has(> .ctl-msg-cote):has(.pol-notif) > * { border-left: 0 !important; }

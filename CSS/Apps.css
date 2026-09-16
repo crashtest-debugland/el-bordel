@@ -207,12 +207,13 @@
 }
 
 .dat-etat-gris {
-  background: var(--neutralDarker);
+  background: var(--FAM-fontLightClr);
   color: var(--neutral);
 }
 
 .dat-bulle {
   padding: 11px 14px;
+  margin-bottom: 10px;
   border-radius: 14px 14px 14px 4px;
   background: var(--neutral);
   line-height: 1.55;
@@ -266,6 +267,7 @@
   font-weight: 700;
   line-height: 1.1;
   color: var(--contrast);
+  margin:10px 0;
 }
 
 .dat-sous {

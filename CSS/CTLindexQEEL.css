@@ -1248,8 +1248,8 @@ border-radius:5px;
 /* ===== LISTE DES SUJETS ===== */
 
 .navigation_links {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   margin: 10px 0;
 }
 
@@ -1266,6 +1266,10 @@ border-radius:5px;
   content: "›";
   font-size: var(--normal-size);
   margin-right: 3px;
+}
+.navigation_indexlink {
+   font-size: 16px;
+   font-family: 'Inter', "Open Sans", Roboto, "San Francisco";
 }
 
 .buttons {

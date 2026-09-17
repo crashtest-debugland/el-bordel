@@ -126,7 +126,8 @@
 }
 
 .qeel-liste{
-  font-size:var(--little-size);line-height:1.7;
+  font-size: var(--FAM-fontSize);
+line-height:1.7;
   flex:1 1 auto;min-height:0;
   overflow-y:auto;overscroll-behavior:contain;
   scrollbar-width:thin;scrollbar-color:var(--neutralDarker) transparent;padding-right:5px;
@@ -147,8 +148,11 @@
   gap:0;
 }
 .qeel-stat b{
-  font-family:"Playfair Display",Georgia,serif;
-  font-size:26px;line-height:1;font-weight:700;color:var(--contrast);
+  font-family:var(--font);
+  font-size:1.40em;
+   line-height:1;
+   font-weight:700;
+   color:var(--contrast);
   min-width:2ch;
 }
 
@@ -175,8 +179,10 @@
 .qeel-inscrit #qeel-newest a{font-weight:700;text-decoration:none;}
 
 .qeel-inscrit em{
-  font-family:"Playfair Display",Georgia,serif;
-  font-style:italic;font-size:var(--medium-size);opacity:.85;
+   font-family: var(--font);
+   font-style: italic;
+   font-size: var(--medium-size);
+   opacity: .85;
 }
 
 @media (max-width:1000px){
@@ -202,7 +208,7 @@
   --ctl-titre: 'Outfit', Arial, Tahoma, serif;
   --ctl-l-sousforums:170px;
   --ctl-l-dernier:130px;
-  --ctl-l-avatar:104px;
+  --ctl-l-avatar:80px;
   --ctl-l-statut:34px;
   --ctl-fond-position:center;
   --ctl-fond-taille:auto;
@@ -278,8 +284,13 @@
 
 .ctl-desc{
   flex:1 1 auto;height:100%;
-  background:var(--ctl-bloc-fond);border-radius:8px;padding:10px 12px;
-  font-size:12px;line-height:1.3;color:var(--textColor);
+  background:var(--ctl-bloc-fond);
+   border-radius:8px;
+   padding:10px 12px;
+  font-size:1.0em;
+   line-height:1.3;
+   color:var(--textColor);
+   text-align:justify;
 }
 
 .ctl-statut{

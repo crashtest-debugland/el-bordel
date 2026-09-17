@@ -366,7 +366,8 @@ line-height:1.7;
 .ctl-compteurs i{font-style:normal;font-size:8.5px;color:var(--textColor);opacity:.7;margin-top:2px;}
 
 .ctl-avatar{
-  flex:0 0 var(--ctl-l-avatar);overflow:hidden;
+  flex:0 0 var(--ctl-l-avatar);
+   overflow:hidden;
 /*  -webkit-mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.55) 30%, #000 60%);
           mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.55) 30%, #000 60%); */
 }
@@ -378,6 +379,7 @@ line-height:1.7;
     object-fit: cover;
     object-position: center 18%;
     border-left: var(--light) 10px solid;
+}
 
 @media (max-width:1120px){
   :root{ --barre-h:104px; }

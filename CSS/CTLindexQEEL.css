@@ -378,7 +378,7 @@ line-height:1.7;
     display: block;
     object-fit: cover;
     object-position: center 18%;
-    border-left: var(--light) 10px solid;
+    border-left: var(--light) 8px solid;
 }
 
 @media (max-width:1120px){

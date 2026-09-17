@@ -206,8 +206,8 @@ line-height:1.7;
   --ctl-trait: var(--neutralDarker);
   --ctl-pouce: var(--neutralDarker);
   --ctl-titre: 'Outfit', Arial, Tahoma, serif;
-  --ctl-l-sousforums:170px;
-  --ctl-l-dernier:130px;
+  --ctl-l-sousforums:180px;
+  --ctl-l-dernier:150px;
   --ctl-l-avatar:80px;
   --ctl-l-statut:34px;
   --ctl-fond-position:center;
@@ -307,8 +307,13 @@ line-height:1.7;
 }
 
 .ctl-sousforums{
-  flex:0 0 var(--ctl-l-sousforums);padding:9px 11px;
-  display:flex;flex-direction:column;gap:5px;justify-content:flex-start;
+  flex:0 0 var(--ctl-l-sousforums);
+   padding:9px 7px;
+   margin-right:3px;
+  display:flex;
+   flex-direction:column;
+   gap:5px;
+   justify-content:flex-start;
 }
 
 .ctl-sousforums > a:first-child{margin-top:auto;}
@@ -325,9 +330,13 @@ line-height:1.7;
 .ctl-sousforums a:hover{background:var(--accentClr);color:var(--neutral);}
 
 .ctl-dernier{
-  width: 140px;padding:9px 12px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;gap:2px;
+   width: var(--ctl-l-dernier);
+   padding:9px 12px;
+   display:flex;
+   flex-direction:column;
+   align-items:center;justify-content:center;
+   text-align:center;gap:2px;
+   border-left: var(--light) 8px solid
 }
 
 .ctl-sujet{
@@ -358,11 +367,17 @@ line-height:1.7;
 
 .ctl-avatar{
   flex:0 0 var(--ctl-l-avatar);overflow:hidden;
-  -webkit-mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.55) 30%, #000 60%);
-          mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.55) 30%, #000 60%);
+/*  -webkit-mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.55) 30%, #000 60%);
+          mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.55) 30%, #000 60%); */
 }
 
-.ctl-avatar img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 18%;max-width:none;max-height:none;}
+.ctl-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 18%;
+    border-left: var(--light) 10px solid;
 
 @media (max-width:1120px){
   :root{ --barre-h:104px; }

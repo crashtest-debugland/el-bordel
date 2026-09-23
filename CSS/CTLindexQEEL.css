@@ -385,6 +385,54 @@ line-height:1.7;
 
 .ctl-forum-titre a:hover{color:var(--accentClr);}
 
+.ctl-forum-titre a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 7px;
+}
+
+.ctl-forum-titre a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background: var(--accentClr);
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 13' preserveAspectRatio='none'><path d='M2 7 C 48 3, 92 10, 140 6 C 188 2, 236 9, 298 5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 13' preserveAspectRatio='none'><path d='M2 7 C 48 3, 92 10, 140 6 C 188 2, 236 9, 298 5' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'/></svg>");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path .6s cubic-bezier(.4,0,.2,1);
+}
+
+.ctl-forum-titre a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  background: var(--accentClr);
+  opacity: .45;
+  -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 13' preserveAspectRatio='none'><path d='M4 4 C 70 9, 104 4, 150 9 C 210 12, 240 3, 296 8' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'/></svg>");
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 13' preserveAspectRatio='none'><path d='M4 4 C 70 9, 104 4, 150 9 C 210 12, 240 3, 296 8' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round'/></svg>");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path .7s cubic-bezier(.4,0,.2,1);
+}
+
+.ctl-forum-titre a:hover::after,
+.ctl-forum-titre a:hover::before {
+  clip-path: inset(0 0 0 0);
+}
+
 .ctl-desc,.ctl-sousforums{
   overflow-y:auto;overscroll-behavior:contain;
   scrollbar-width:thin;scrollbar-color:var(--ctl-pouce) transparent;
